@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/signpage" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:textColor="#000000"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:layout_gravity="left"
+                android:layout_marginTop="20dp"/>
+
+            <RelativeLayout
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerInParent="true"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="5dp">
+
+                    <ImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/profile" />
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btn_add_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="5dp"
+                    android:src="@android:drawable/ic_input_add"
+                    android:contentDescription="Add Profile Picture"
+                    app:fabSize="mini"
+                    app:backgroundTint="#46B2C8"/>
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/input_field_style"
+                android:hint="Full Name"
+                android:textColorHint="#D3D3D3"
+                android:textColor="#000000"
+                android:paddingLeft="15dp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/input_field_style"
+                android:hint="Email Address"
+                android:textColorHint="#D3D3D3"
+                android:textColor="#000000"
+                android:paddingLeft="15dp"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/input_field_style"
+                android:hint="Address"
+                android:textColorHint="#D3D3D3"
+                android:textColor="#000000"
+                android:paddingLeft="15dp"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/et_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/input_field_style"
+                android:hint="Mobile Number"
+                android:textColorHint="#D3D3D3"
+                android:textColor="#000000"
+                android:paddingLeft="15dp"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/input_field_style"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColorHint="#D3D3D3"
+                android:textColor="#000000"
+                android:paddingLeft="15dp"
+                android:layout_marginTop="15dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_register_submit"
+                android:layout_width="160dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/blue_btn_rounded"
+                android:text="Register"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
