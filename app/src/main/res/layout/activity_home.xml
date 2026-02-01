@@ -6,10 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -18,221 +17,21 @@
             android:background="#81BBE3"
             app:title="FoodieGo"
             app:titleTextColor="#FFFFFF"
-            app:navigationIcon="@drawable/outline_menu_24"
-            app:menu="@menu/main_menu" />
+            app:navigationIcon="@drawable/outline_menu_24" />
 
-        <ScrollView
+        <GridView
+            android:id="@+id/food_grid"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:numColumns="2"
+            android:padding="8dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp" />
 
-            <GridLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:columnCount="2"
-                android:padding="8dp"
-                android:alignmentMode="alignMargins">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="5dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="180dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/food1" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Mixed Fried Meat"
-                            android:textStyle="bold"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="8dp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="20 $"
-                            android:textColor="#4CAF50"
-                            android:layout_gravity="center"
-                            android:paddingBottom="10dp"/>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="5dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="180dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/food2" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Italian Pizza"
-                            android:textStyle="bold"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="8dp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="30 $"
-                            android:textColor="#4CAF50"
-                            android:layout_gravity="center"
-                            android:paddingBottom="10dp"/>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="5dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="180dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/food3" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Vegetarian Salad"
-                            android:textStyle="bold"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="8dp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="15 $"
-                            android:textColor="#4CAF50"
-                            android:layout_gravity="center"
-                            android:paddingBottom="10dp"/>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="5dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="180dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/food4" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Beef Burger"
-                            android:textStyle="bold"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="8dp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="25 $"
-                            android:textColor="#4CAF50"
-                            android:layout_gravity="center"
-                            android:paddingBottom="10dp"/>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="5dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="180dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/food5" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Chicken Platter"
-                            android:textStyle="bold"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="8dp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="18 $"
-                            android:textColor="#4CAF50"
-                            android:layout_gravity="center"
-                            android:paddingBottom="10dp"/>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="5dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="180dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/food6" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Pasta Extra"
-                            android:textStyle="bold"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="8dp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="22 $"
-                            android:textColor="#4CAF50"
-                            android:layout_gravity="center"
-                            android:paddingBottom="10dp"/>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-            </GridLayout>
-        </ScrollView>
-    </LinearLayout>
+    </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
